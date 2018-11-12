@@ -60,7 +60,9 @@ class MainActivity : AppCompatActivity() {
         user.name.set("Cancel ObservableField")
 
         userMap["name"] = "Cancel ObservableArrayMap"
+    }
 
+    fun onMove(view: View) {
         newIntentForTwoWayActivity()
     }
 
