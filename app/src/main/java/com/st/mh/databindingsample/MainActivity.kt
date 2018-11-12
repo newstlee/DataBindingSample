@@ -9,6 +9,7 @@ import com.st.mh.databindingsample.adapter.UserAdapter
 import com.st.mh.databindingsample.databinding.ActivityMainBinding
 import com.st.mh.databindingsample.model.User
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -33,10 +34,10 @@ class MainActivity : AppCompatActivity() {
     private fun setRecyclerView() {
         val users = ObservableArrayList<User>()
 
-        users.add(User("Ted", 32))
-        users.add(User("Jane", 20))
-        users.add(User("Paul", 40))
-        users.add(User("Ailee", 25))
+        users.add(User("Ted", 32, R.color.colorAccent))
+        users.add(User("Jane", 20, R.color.colorPrimary))
+        users.add(User("Paul", 40, R.color.colorPrimaryDark))
+        users.add(User("Ailee", 25, R.color.colorAccent))
 
         binding.listUser.adapter = UserAdapter(users)
     }

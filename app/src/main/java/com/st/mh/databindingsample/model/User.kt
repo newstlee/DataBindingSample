@@ -1,3 +1,3 @@
 package com.st.mh.databindingsample.model
 
-data class User(val name: String, val age: Int)
+data class User(val name: String, val age: Int, val color: Int)
