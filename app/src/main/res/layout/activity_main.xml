@@ -32,6 +32,7 @@
             android:id="@+id/text_title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text='@{userMap["name"]}'
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -42,6 +43,7 @@
             android:id="@+id/text_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@{user.name}"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -52,6 +54,7 @@
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@{model.name}"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -60,7 +63,7 @@
 
         <Button
             android:id="@+id/button_ok"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -73,7 +76,7 @@
 
         <Button
             android:id="@+id/button_cancel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -89,7 +92,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"

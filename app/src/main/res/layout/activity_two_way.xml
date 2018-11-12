@@ -15,6 +15,15 @@
         android:layout_height="match_parent"
         tools:context=".TwoWayActivity">
 
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="2-way Test"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <EditText
             android:id="@+id/edit_name"
             android:layout_width="wrap_content"
@@ -25,7 +34,7 @@
             android:inputType="textPersonName"
             android:text="@={vm.contents}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/text_title" />
 
         <TextView
             android:id="@+id/text_name"
@@ -37,6 +46,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
+        <TextView
+            android:id="@+id/text_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Custom 2-way Test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
         <EditText
             android:id="@+id/edit_name2"
             android:layout_width="wrap_content"
@@ -45,7 +64,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_title2"
             app:text="@={vm.contents2}" />
 
         <TextView
