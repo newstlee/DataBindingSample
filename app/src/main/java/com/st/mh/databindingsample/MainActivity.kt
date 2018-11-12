@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
         user.name.set("Cancel ObservableField")
 
         userMap["name"] = "Cancel ObservableArrayMap"
+
+        newIntentForTwoWayActivity()
     }
 
     private fun setRecyclerView() {
