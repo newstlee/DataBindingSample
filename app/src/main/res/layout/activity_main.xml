@@ -8,6 +8,10 @@
         <variable
             name="activity"
             type="com.st.mh.databindingsample.MainActivity" />
+
+        <variable
+            name="model"
+            type="com.st.mh.databindingsample.model.User" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -19,7 +23,7 @@
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@{model.name}"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

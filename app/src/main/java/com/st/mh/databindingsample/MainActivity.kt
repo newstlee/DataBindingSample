@@ -13,6 +13,7 @@ import com.st.mh.databindingsample.model.User
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    lateinit var model: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,15 +21,18 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.activity = this
 
+        model = User("lst", 38, R.color.colorAccent)
+        binding.model = model
+
         setRecyclerView()
     }
 
     fun onOk(view: View) {
-        binding.textTitle.text = "OK"
+        model.setName("OK")
     }
 
     fun onCancel(view: View) {
-        binding.textTitle.text = "Cancel"
+        model.setName("Cancel")
     }
 
     private fun setRecyclerView() {
