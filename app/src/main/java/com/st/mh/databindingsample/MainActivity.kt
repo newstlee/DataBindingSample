@@ -9,6 +9,9 @@ import com.st.mh.databindingsample.adapter.UserAdapter
 import com.st.mh.databindingsample.databinding.ActivityMainBinding
 import com.st.mh.databindingsample.model.User
 import com.st.mh.databindingsample.model.User2
+import android.databinding.ObservableArrayMap
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var model: User
     lateinit var user: User2
+    lateinit var userMap: ObservableArrayMap<String, Any>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,13 @@ class MainActivity : AppCompatActivity() {
         user.color.set(R.color.colorAccent)
         binding.user = user
 
+        userMap = ObservableArrayMap()
+        userMap["name"] = "Google"
+        userMap["age"] = 17
+        userMap["color"] = R.color.colorAccent
+        binding.userMap = userMap
+
+
         setRecyclerView()
     }
 
@@ -39,12 +50,16 @@ class MainActivity : AppCompatActivity() {
         model.setName("BaseObserbavle")
 
         user.name.set("ObservableField")
+
+        userMap["name"] = "ObservableArrayMap"
     }
 
     fun onCancel(view: View) {
         model.setName("Cancel BaseObserbavle")
 
         user.name.set("Cancel ObservableField")
+
+        userMap["name"] = "Cancel ObservableArrayMap"
     }
 
     private fun setRecyclerView() {
