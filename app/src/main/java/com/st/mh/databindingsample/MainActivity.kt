@@ -8,12 +8,14 @@ import android.view.View
 import com.st.mh.databindingsample.adapter.UserAdapter
 import com.st.mh.databindingsample.databinding.ActivityMainBinding
 import com.st.mh.databindingsample.model.User
+import com.st.mh.databindingsample.model.User2
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     lateinit var model: User
+    lateinit var user: User2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,15 +26,25 @@ class MainActivity : AppCompatActivity() {
         model = User("lst", 38, R.color.colorAccent)
         binding.model = model
 
+        user = User2()
+        user.name.set("lst ")
+        user.age.set(38)
+        user.color.set(R.color.colorAccent)
+        binding.user = user
+
         setRecyclerView()
     }
 
     fun onOk(view: View) {
-        model.setName("OK")
+        model.setName("BaseObserbavle")
+
+        user.name.set("ObservableField")
     }
 
     fun onCancel(view: View) {
-        model.setName("Cancel")
+        model.setName("Cancel BaseObserbavle")
+
+        user.name.set("Cancel ObservableField")
     }
 
     private fun setRecyclerView() {
