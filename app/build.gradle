@@ -35,6 +35,8 @@ dependencies {
     // compiler version 은 gradle version과 같거나 높아야 한다.
     kapt "com.android.databinding:compiler:3.1.4"
 
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
