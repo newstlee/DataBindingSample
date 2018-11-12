@@ -2,6 +2,7 @@ package com.st.mh.databindingsample.bindingAdapter
 
 import android.databinding.BindingAdapter
 import android.view.View
+import android.widget.TextView
 
 class BindingAdapter {
 
@@ -19,6 +20,11 @@ class BindingAdapter {
         @BindingAdapter("visibleOrInvisible")
         @JvmStatic fun View.setVisibleOrInvisible(show: Boolean) {
             visibility = if(show) View.VISIBLE else View.INVISIBLE
+        }
+
+        @BindingAdapter("convertText")
+        @JvmStatic fun TextView.convertIntToString(value: Int) {
+            text = value.toString()
         }
     }
 }
