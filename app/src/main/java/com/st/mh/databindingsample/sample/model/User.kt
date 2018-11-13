@@ -1,4 +1,4 @@
-package com.st.mh.databindingsample.model
+package com.st.mh.databindingsample.sample.model
 
 import android.databinding.BaseObservable
 import android.databinding.Bindable

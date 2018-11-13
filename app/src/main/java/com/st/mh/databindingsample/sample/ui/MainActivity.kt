@@ -1,17 +1,16 @@
-package com.st.mh.databindingsample
+package com.st.mh.databindingsample.sample.ui
 
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableArrayList
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.st.mh.databindingsample.adapter.UserAdapter
+import com.st.mh.databindingsample.sample.adapter.UserAdapter
 import com.st.mh.databindingsample.databinding.ActivityMainBinding
-import com.st.mh.databindingsample.model.User
-import com.st.mh.databindingsample.model.User2
+import com.st.mh.databindingsample.sample.model.User
+import com.st.mh.databindingsample.sample.model.User2
 import android.databinding.ObservableArrayMap
-
-
+import com.st.mh.databindingsample.R
 
 
 class MainActivity : AppCompatActivity() {

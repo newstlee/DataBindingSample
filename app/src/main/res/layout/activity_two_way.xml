@@ -7,13 +7,13 @@
 
         <variable
             name="vm"
-            type="com.st.mh.databindingsample.model.TwoWayModel" />
+            type="com.st.mh.databindingsample.sample.model.TwoWayModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TwoWayActivity">
+        tools:context=".sample.ui.TwoWayActivity">
 
         <TextView
             android:id="@+id/text_title"

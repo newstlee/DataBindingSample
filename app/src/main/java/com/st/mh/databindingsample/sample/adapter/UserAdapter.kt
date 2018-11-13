@@ -1,4 +1,4 @@
-package com.st.mh.databindingsample.adapter
+package com.st.mh.databindingsample.sample.adapter
 
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableArrayList
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.databinding.ItemListBinding
-import com.st.mh.databindingsample.model.User
+import com.st.mh.databindingsample.sample.model.User
 
 class UserAdapter(private val list: ObservableArrayList<User>): RecyclerView.Adapter<UserAdapter.UserHolder>() {
 

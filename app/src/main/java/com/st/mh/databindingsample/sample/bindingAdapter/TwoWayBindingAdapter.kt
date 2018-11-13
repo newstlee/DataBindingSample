@@ -1,4 +1,4 @@
-package com.st.mh.databindingsample.bindingAdapter
+package com.st.mh.databindingsample.sample.bindingAdapter
 
 import android.databinding.BindingAdapter
 import android.databinding.InverseBindingAdapter
