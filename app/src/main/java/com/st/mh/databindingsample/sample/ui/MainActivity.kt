@@ -11,6 +11,7 @@ import com.st.mh.databindingsample.sample.model.User
 import com.st.mh.databindingsample.sample.model.User2
 import android.databinding.ObservableArrayMap
 import com.st.mh.databindingsample.R
+import com.st.mh.databindingsample.example.ui.newIntentForMvvmActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +64,10 @@ class MainActivity : AppCompatActivity() {
 
     fun onMove(view: View) {
         newIntentForTwoWayActivity()
+    }
+
+    fun onMoveMvvm(view: View) {
+        newIntentForMvvmActivity()
     }
 
     private fun setRecyclerView() {
