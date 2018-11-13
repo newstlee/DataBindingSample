@@ -1,5 +1,6 @@
 package com.st.mh.databindingsample.example.viewmodel
 
+import android.arch.lifecycle.MutableLiveData
 import android.databinding.BaseObservable
 import android.databinding.Bindable
 import android.databinding.ObservableField
@@ -11,6 +12,15 @@ class LoginViewModel(private var email: String = "", private var password: Strin
 
     val errorPassword = ObservableField<String>()
     val errorEmail = ObservableField<String>()
+    private var userMutableLiveData: MutableLiveData<Login>? = null
+
+    fun getLogin(): MutableLiveData<Login>? {
+        if (userMutableLiveData == null) {
+            userMutableLiveData = MutableLiveData()
+        }
+
+        return userMutableLiveData
+    }
 
     @Bindable
     fun getEmail(): String {
@@ -46,5 +56,7 @@ class LoginViewModel(private var email: String = "", private var password: Strin
         else {
             errorPassword.set(null)
         }
+
+        userMutableLiveData?.value = login
     }
  }

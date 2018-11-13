@@ -4,7 +4,7 @@ import android.util.Patterns
 
 data class Login(private val email: String?, private val password: String?) {
 
-    private fun getEmail(): String {
+    fun getEmail(): String {
         email?.let {
             return it
         }
@@ -12,7 +12,7 @@ data class Login(private val email: String?, private val password: String?) {
         return ""
     }
 
-    private fun getPassword(): String {
+    fun getPassword(): String {
         password?.let {
             return it
         }
