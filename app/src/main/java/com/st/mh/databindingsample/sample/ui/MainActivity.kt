@@ -2,16 +2,17 @@ package com.st.mh.databindingsample.sample.ui
 
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableArrayList
+import android.databinding.ObservableArrayMap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.st.mh.databindingsample.sample.adapter.UserAdapter
+import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.databinding.ActivityMainBinding
+import com.st.mh.databindingsample.example.ui.newIntentForMvvmActivity
+import com.st.mh.databindingsample.sample.adapter.UserAdapter
 import com.st.mh.databindingsample.sample.model.User
 import com.st.mh.databindingsample.sample.model.User2
-import android.databinding.ObservableArrayMap
-import com.st.mh.databindingsample.R
-import com.st.mh.databindingsample.example.ui.newIntentForMvvmActivity
+import com.st.mh.databindingsample.sample.viewmodel.UserViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,40 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.activity = this
-
-        model = User("lst", 38, R.color.colorAccent)
-        binding.model = model
-
-        user = User2()
-        user.name.set("lst ")
-        user.age.set(38)
-        user.color.set(R.color.colorAccent)
-        binding.user = user
-
-        userMap = ObservableArrayMap()
-        userMap["name"] = "Google"
-        userMap["age"] = 17
-        userMap["color"] = R.color.colorAccent
-        binding.userMap = userMap
-
+        binding.model = UserViewModel()
 
         setRecyclerView()
-    }
-
-    fun onOk(view: View) {
-        model.setName("BaseObserbavle")
-
-        user.name.set("ObservableField")
-
-        userMap["name"] = "ObservableArrayMap"
-    }
-
-    fun onCancel(view: View) {
-        model.setName("Cancel BaseObserbavle")
-
-        user.name.set("Cancel ObservableField")
-
-        userMap["name"] = "Cancel ObservableArrayMap"
     }
 
     fun onMove(view: View) {

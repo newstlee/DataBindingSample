@@ -11,16 +11,7 @@
 
         <variable
             name="model"
-            type="com.st.mh.databindingsample.sample.model.User" />
-
-        <variable
-            name="user"
-            type="com.st.mh.databindingsample.sample.model.User2" />
-
-        <import type="android.databinding.ObservableMap"/>
-        <variable
-            name="userMap"
-            type="ObservableMap&lt;String, Object&gt;"/>
+            type="com.st.mh.databindingsample.sample.viewmodel.UserViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -33,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text='@{userMap["name"]}'
+            android:text='@{model.userMap["name"]}'
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -44,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{user.name}"
+            android:text="@{model.user.name}"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -55,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{model.name}"
+            android:text="@{model.model.name}"
             android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -68,7 +59,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:onClick="onOk"
+            android:onClick="@{()-> model.onOkClicked()}"
             android:text="OK"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +72,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:onClick="onCancel"
+            android:onClick="@{()-> model.onCancelClicked()}"
             android:text="Cancel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
