@@ -1,7 +1,6 @@
 package com.st.mh.databindingsample.sample.viewmodel
 
 import android.content.Context
-import android.view.View
 import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.example.ui.newIntentForMvvmActivity
 import com.st.mh.databindingsample.sample.model.User2

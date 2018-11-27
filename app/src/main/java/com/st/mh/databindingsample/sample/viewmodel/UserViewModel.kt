@@ -1,11 +1,15 @@
 package com.st.mh.databindingsample.sample.viewmodel
 
+import android.content.Context
 import android.databinding.ObservableArrayMap
 import com.st.mh.databindingsample.R
+import com.st.mh.databindingsample.example.ui.newIntentForMvvmActivity
 import com.st.mh.databindingsample.sample.model.User
 import com.st.mh.databindingsample.sample.model.User2
+import com.st.mh.databindingsample.sample.ui.newIntentForTwoWayActivity
+import com.st.mh.databindingsample.sample.ui.newIntentForUser1Activity
 
-class UserViewModel {
+class UserViewModel(private val context: Context) {
     var model: User = User("lst", 38, R.color.colorAccent)
     var user: User2 = User2()
     var userMap: ObservableArrayMap<String, Any>
@@ -22,19 +26,15 @@ class UserViewModel {
         userMap["color"] = R.color.colorAccent
     }
 
-    fun onOkClicked() {
-        model.setName("BaseObserbavle")
-
-        user.name.set("ObservableField")
-
-        userMap["name"] = "ObservableArrayMap"
+    fun onMoveUser1() {
+        context.newIntentForUser1Activity()
     }
 
-    fun onCancelClicked() {
-        model.setName("Cancel BaseObserbavle")
+    fun onMoveTwoWay() {
+        context.newIntentForTwoWayActivity()
+    }
 
-        user.name.set("Cancel ObservableField")
-
-        userMap["name"] = "Cancel ObservableArrayMap"
+    fun onMoveMvvm() {
+        context.newIntentForMvvmActivity()
     }
 }

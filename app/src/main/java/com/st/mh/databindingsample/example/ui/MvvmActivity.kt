@@ -1,17 +1,17 @@
 package com.st.mh.databindingsample.example.ui
 
-import android.app.Activity
 import android.arch.lifecycle.Observer
+import android.content.Context
 import android.content.Intent
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.databinding.ActivityMvvmBinding
 import com.st.mh.databindingsample.example.viewmodel.LoginViewModel
 
-fun Activity.newIntentForMvvmActivity() {
+fun Context.newIntentForMvvmActivity() {
     val intent = Intent(this, MvvmActivity::class.java)
     startActivity(intent)
 }

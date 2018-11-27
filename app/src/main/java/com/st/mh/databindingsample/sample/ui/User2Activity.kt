@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.databinding.ActivityUser2Binding
-import com.st.mh.databindingsample.sample.model.User2
 import com.st.mh.databindingsample.sample.viewmodel.User2ViewModel
 
 fun Context.newIntentForUser2Activity() {
@@ -18,7 +17,6 @@ fun Context.newIntentForUser2Activity() {
 class User2Activity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUser2Binding
-    lateinit var user: User2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

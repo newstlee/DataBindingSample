@@ -1,6 +1,6 @@
 package com.st.mh.databindingsample.sample.ui
 
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.st.mh.databindingsample.R
 import com.st.mh.databindingsample.databinding.ActivityTwoWayBinding
 import com.st.mh.databindingsample.sample.model.TwoWayModel
 
-fun Activity.newIntentForTwoWayActivity() {
+fun Context.newIntentForTwoWayActivity() {
     val intent = Intent(this, TwoWayActivity::class.java)
     startActivity(intent)
 }
