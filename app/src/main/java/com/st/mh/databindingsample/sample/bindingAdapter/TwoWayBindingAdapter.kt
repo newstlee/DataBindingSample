@@ -17,7 +17,7 @@ object TwoWayBindingAdapter {
             view.text = text
         }
     }
-
+/*
     @BindingAdapter("textAttrChanged")
     @JvmStatic
     fun setTextWatcher(view: TextView, textAttrChanged: InverseBindingListener?) {
@@ -33,6 +33,7 @@ object TwoWayBindingAdapter {
             }
         })
     }
+*/
 
     @InverseBindingAdapter(attribute = "text", event = "textAttrChanged")
     @JvmStatic
